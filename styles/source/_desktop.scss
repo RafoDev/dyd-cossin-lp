@@ -1,0 +1,238 @@
+@media (min-width: 992px) {
+	.nav {
+		transition: background 0.25s;
+		&__container {
+			margin: 0 auto;
+			max-width: 90%;
+		}
+		&__button {
+			display: none;
+		}
+		&__logo {
+			&__img {
+				width: 70px;
+			}
+			&__title {
+				font-size: 1.5rem;
+			}
+		}
+		&__list {
+			z-index: auto;
+			position: relative;
+			width: auto;
+			min-height: auto;
+			background-color: transparent;
+
+			flex-direction: row;
+			gap: 3rem;
+
+			clip-path: circle(70.7% at 50% 50%);
+		}
+		&__item {
+			position: relative;
+			&::after {
+				content: none;
+			}
+			&:hover::after {
+				content: none;
+			}
+		}
+		&__item__link {
+			color: var(--light-color);
+			font-weight: 400;
+			font-size: 1.2rem;
+		}
+	}
+
+	.main {
+		&__section {
+			width: 100vw;
+			&__container {
+				width: 70%;
+				margin: 0 auto;
+			}
+		}
+		&__slogan__text {
+			font-size: 4rem;
+		}
+		&__slogan__btn {
+			position: relative;
+			font-size: 1.2rem;
+			transition: background-color 0.25s;
+			&:hover {
+				background-color: var(--secondary-color);
+			}
+		}
+
+		
+		&__clients {
+			margin-top: 2rem;
+			gap: 2rem;
+			&__title {
+				font-size: 1.2rem;
+				color: #333333f7;
+			}
+			border-bottom: none;
+		}
+		&__clients__container {
+			justify-content: center;
+			gap: 2rem;
+		}
+		&__client {
+			opacity: 0.5;
+			filter: grayscale(100%);
+			width: 100px;
+			height: 100px;
+			object-fit: contain;
+			transition: all 0.25s;
+			&:hover {
+				opacity: 1;
+				filter: grayscale(0%);
+			}
+		}
+
+		&__we__title,
+		&__vismis__title,
+		&__services__title {
+			color: var(--primary-color);
+			position: relative;
+			display: inline;
+			font-size: 3.5rem;
+			&::after {
+				content: none;
+			}
+		}
+		
+
+		&__we {
+			display: grid;
+			gap: 0.5rem 3rem;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: auto;
+			grid-template-areas:
+				'wTitle wTitle'
+				'wSubtitle wFigure'
+				'wParagraph wFigure'
+				'wTeam wFigure';
+			&__title {
+				grid-area: wTitle;
+			}
+			&__subtitle {
+				grid-area: wSubtitle;
+				font-size: 1.5rem;
+			}
+			&__paragraph {
+				grid-area: wParagraph;
+			}
+			&__team {
+				grid-area: wTeam;
+			}
+			&__figure {
+				grid-area: wFigure;
+				background-color: red;
+				display: flex;
+			}
+			&__img {
+				width: 100%;
+				max-width: none;
+				object-position: center;
+			}
+		}
+		&__services {
+			&__list {
+				margin-top: 1rem;
+				display: flex;
+				flex-direction: column;
+				flex-wrap: nowrap;
+				gap: 0rem;
+				justify-content: center;
+			}
+		}
+		&__service {
+			max-width: 100%;
+			border: none;
+			flex-direction: row;
+			align-items: center;
+			&__images {
+				flex-direction: row;
+				justify-content: stretch;
+				align-items: center;
+				height: 250px;
+				width: 50%;
+			}
+			&__img {
+				flex-grow: 1;
+				height: 100%;
+				object-fit: cover;
+			}
+			&__name {
+				width: 50%;
+				margin: 0;
+				text-align: center;
+				font-weight: 600;
+				padding: 2rem;
+			}
+			&:nth-child(odd) {
+				flex-direction: row-reverse;
+			}
+		}
+
+		&__vismis {
+			&__content{
+				display: flex;
+				gap: 2rem;
+			}
+		}
+	}
+	.main__section--vismis{
+		width: 100vw;
+		background-color: #33333313;
+	}
+
+	.footer {
+		width: 100vw;
+		&__container {
+			justify-content: center;
+			align-items: center;
+			display: grid;
+			width: 70%;
+			margin: 0 auto;
+		}
+		&__logo {
+			&__img {
+				width: 70px;
+			}
+			&__title {
+				font-weight: 700;
+				font-size: 1.5rem;
+			}
+		}
+		&__links {
+			list-style: none;
+			padding: 0;
+			display: flex;
+			gap: 1rem;
+			justify-content: center;
+		}
+		&__link {
+			font-size: 1.5rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 2.5rem;
+			height: 2.5rem;
+			background-color: #d7d7d7;
+			border-radius: 100%;
+		}
+		&__link a {
+			text-decoration: none;
+			color: inherit;
+		}
+		&__copy {
+			padding: 1rem;
+			margin: 0;
+			color: #d7d7d7;
+			font-weight: 100;
+		}
+	}
+}
